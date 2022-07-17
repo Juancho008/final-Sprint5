@@ -21,15 +21,14 @@ class Parser():
     def get_cliente(self):
         if self.data['tipo'] == 'BLACK':
             self.cliente=cliente.ClienteBlack(self.data)
-            self.cliente.crear_cuenta(cuenta.caja_de_ahorro_p)
-            self.cliente.crear_cuenta(cuenta.caja_de_ahorro_d)
-            self.cliente.crear_cuenta(cuenta.cuenta_corriente)
+            self.cliente.crear_cuenta(cuenta.Cuenta(100000,100000000,-1,0,0))
+            self.cliente.crear_cuenta(cuenta.Cuenta(100000,100000000,-1,0,0))
+            self.cliente.crear_cuenta(cuenta.Cuenta(100000,100000000,-1,0,-10000))
         elif self.data['tipo'] == 'GOLD':
             self.cliente=cliente.ClienteGold(self.data)
-            self.cliente.crear_cuenta(cuenta.caja_de_ahorro_p)
-            self.cliente.crear_cuenta(cuenta.caja_de_ahorro_d)
+            self.cliente.crear_cuenta(cuenta.Cuenta(20000,500000,-1,0.005,0))
+            self.cliente.crear_cuenta(cuenta.Cuenta(20000,500000,-1,0.005,0))
+            self.cliente.crear_cuenta(cuenta.Cuenta(20000,500000,-1,0.005,-10000))
         else:
             self.cliente=cliente.ClienteClassic(self.data)
-            self.cliente.crear_cuenta(cuenta.caja_de_ahorro_p)
-
- 
+            self.cliente.crear_cuenta(cuenta.Cuenta(10000,150000,-1,0.01,0))
