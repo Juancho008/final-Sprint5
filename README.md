@@ -5,3 +5,11 @@
 ---
 
 `Generador de reportes del ITBANK`
+
+### imports necesarios
+
+  -pandas (pip install pandas)
+
+### generar reporte
+
+Para poder generar el reporte es necesario ejecutar el script app.py
